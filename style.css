@@ -1,0 +1,420 @@
+@import url('./fontes/fonts.css');
+
+:root{
+    --branco: #eeefeb;
+    --verdeE: #102f2d;
+    --verdeC: #81ffc3;
+    --rosa: #ee42dd;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--verdeE);
+    overflow: hidden;
+    position: relative;
+}
+main{
+    width: 100%;
+    height: 100%;
+}
+#fundo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sqr{
+    width: 8.33%;
+    height: 14.3%;
+    border: 0.5px solid #193533;
+    background-color: var(--verdeE);
+}
+.sqr.verdeC {
+    background-color: var(--verdeC);
+    border: 0.5px solid var(--verdeC);
+}
+.sqr:not(.verdeC):hover{
+    background-color: #193533;
+}
+#menu{
+    z-index: 3;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding:  20px 8%;
+
+}
+.lines{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-right: 50px;
+}
+ 
+.lines div{
+    width: 40px;
+    height: 3px;
+    background-color: var(--branco);
+}
+
+#rarepic{
+    width: 130px;
+    height: 50px;
+    margin-right: auto;
+}
+nav{
+    display: flex;
+    font: normal 20px normal;
+    font-family: Ubuntu;
+    color: var(--branco);
+    width: 300px;
+    gap: 65px;
+    margin-right: 500px;
+}
+#menu button{
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid var(--verdeC);
+    color: var(--branco);
+    font-size: 15px;
+    font-family: Ubuntu;
+    transition: all 0.5s ease;
+}
+
+#menu button:hover{
+    cursor: pointer;
+    background-color: var(--verdeC);
+    color: #102f2d;
+}
+#menu nav h4{
+    position: relative;
+}
+#menu nav h4:hover{
+    cursor: pointer;
+}
+#menu nav h4::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: transparent;
+    width: 0%;
+    transition: all 0.5s ease;
+    border-bottom: 2px solid transparent;
+}
+#menu nav h4:hover::after{
+    border-bottom: 2px solid var(--verdeC);
+    width: 100%;
+}
+#gato{
+    position: absolute;
+    bottom: -100px;
+    right: 12%;
+    width: 820px;
+    z-index: 8;
+}
+#gato:hover{
+    cursor: pointer;
+}
+.blur{
+    position: absolute;
+    width: 1080px;
+    pointer-events: none;
+}
+.blur.um{
+    top: -500px;
+    left: -500px;
+    opacity: 0.5;
+    
+}
+.blur.dois{
+    bottom: -700px;
+    right: -50px;
+    width: 1500px;
+}
+
+#titulo{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 15%;
+    left: 15%;
+}
+
+#titulo #texto{
+    position: relative;
+    font: normal 60px normal;
+    font-family: BodyText;
+    color: var(--branco);
+}
+#titulo #texto h2:first-child{
+    font-family: Ubuntu;
+    font-weight: bolder;
+    font-size: 100px;
+    position: absolute;
+    left: -80px;
+    top: 110px;
+}
+#titulo #texto h2:nth-child(3){
+    margin-left: 10px;
+}
+#titulo button{
+    z-index: 9;
+    font-weight: bold;
+    font-family: Ubuntu;
+    color: var(--branco);
+    background-color: var(--rosa);
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+#titulo button:hover{
+    cursor: pointer;
+    border: 3px solid var(--branco);
+    
+}
+
+.pessoas{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    bottom: 10%;
+    left: 12%;
+}
+.pessoas img{
+    width: 100px;
+}
+.pessoas .num{
+    margin-left: 10px;
+    color: var(--branco);
+    font-family: Ubuntu;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pessoas .num h2:nth-child(2){
+    color: var(--verdeC);
+    font-family: Ubuntu;
+    font-size: 13px;
+}
+
+#socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    position: absolute;
+    right: 5%;
+    top: 25%;
+}
+#socials img{
+    width: 15px;
+    position: relative;
+}
+#socials img:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+/* LAPTOP L */
+
+@media only screen and (max-width: 1440px){
+    html{
+        overflow: hidden;
+    }
+    
+    #rarepic{
+        width: 130px;
+        height: 50px;
+        margin-right: auto;
+    }
+    nav{
+        margin-right: auto;
+    }
+    #menu button{
+        width: 200px;
+    }
+
+    #gato{
+        bottom: -100px;
+        right: 2%;
+        width: 720px;
+
+    }
+    
+    #titulo{
+        top: 15%;
+        left: 12%;
+    }
+
+}
+/* LAPTOP */
+
+@media only screen and (max-width: 1025px){
+    html{
+        overflow: hidden;
+    }
+    nav{
+        gap: 45px;
+    }
+    #gato{
+        position: absolute;
+        bottom: -70px;
+        right: 0%;
+        width: 620px;
+        z-index: 8;
+    }
+    
+    .blur.dois{
+        bottom: -700px;
+        right: -300px;
+        width: 1500px;
+    }
+    #titulo{
+        z-index: 9;
+    }
+    #titulo #texto{
+        font: normal 40px normal;
+        font-family: BodyText;
+    }
+    #titulo #texto h2:first-child{
+        font-family: Ubuntu;
+        font-size: 50px;
+        left: -40px;
+        top: 85px;
+    }
+    
+    .pessoas{
+        z-index: 9;
+    }
+}
+/* TABLET */
+@media only screen and (max-width: 768px){
+    html{
+        overflow: hidden;
+    }
+    .lines{
+        display: none;
+    }
+    nav{
+        display: none;
+    }
+    #gato{
+        position: absolute;
+        bottom: -10px;
+        right: -5%;
+        width: 520px;
+        z-index: 8;
+    }
+    .blur.dois{
+        bottom: -700px;
+        right: -500px;
+        width: 1500px;
+    }
+    #titulo{
+        top: 200px;
+        z-index: 3;
+    }
+    #titulo #texto{
+        font: normal 30px normal;
+        font-family: BodyText;
+    }
+    #titulo #texto h2:first-child{
+        font-size: 50px;
+        left: -40px;
+        top: 50px;
+    }
+    .pessoas{
+        display: flex;
+        left: 60px;
+        z-index: 9;
+    }
+    #socials{
+        display: flex;
+    }
+}
+/* MOBILE L*/
+@media only screen and (max-width: 425px){
+    html{
+        overflow: hidden;
+    }
+    .lines{
+        display: none;
+    }
+    nav{
+        display: none;
+    }
+    #gato{
+        position: absolute;
+        bottom: -5%;
+        right: 0%;
+        width: 420px;
+        z-index: 8;
+    }
+    .blur.dois{
+        bottom: -700px;
+        right: -500px;
+        width: 1500px;
+    }
+     #titulo{
+        z-index: 3;
+        top: 13%;
+    }
+    #titulo #texto{
+        font: normal 30px normal;
+        font-family: BodyText;
+    }
+    #titulo #texto h2:first-child{
+        font-size: 50px;
+        left: -40px;
+        top: 50px;
+    }
+    .pessoas{
+        display: none;
+    }
+    #socials{
+        display: none;
+    }
+}
+/* MOBILE M */
+@media only screen and (max-width: 375px){
+   
+    #gato{
+        bottom: -7%;
+        right: -5%;
+    }
+    #titulo{
+        z-index: 3;
+    }
+    #titulo #texto h2:first-child{
+        font-size: 50px;
+        left: 180px;
+        top: 55px;
+    }
+    #titulo button{
+        margin-top: 15px;
+    }
+    #titulo #texto h2:nth-child(3){
+        margin-left: 0px;
+    }
+}

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'BodyText' ;
+    src: url('./Body-Text-Large-ExtraBold.woff');
+}
+
+@font-face {
+    font-family: 'Panton';
+    src: url('./panton-rust-black-base.woff');
+}
+@font-face {
+    font-family: 'Filson';
+    src: url('./FilsonProRegular.woff');
+}
